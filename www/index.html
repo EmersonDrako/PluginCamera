@@ -30,7 +30,7 @@
     <body>
 <div id="diviceready" class="blink">
     <p><button onclick="app.capturePhone()">capturar foto</button></p>
-     <p><button  onclick="clicaqui()">OTROS DATOS</button></p>
+     <p><button  id="clicaqui">OTROS DATOS</button></p>
     <p><img style="display: none; width: 250px;height: 250px" id="minhaImagem" src=""></p>
 </div>
 
@@ -40,9 +40,11 @@
     <script type="text/javascript">
         app.initialize();
        
-     function clicaqui(){
-        alert("HOLA MUNDO");
-       }
+$('#clicaqui').on('click', function(){
+        alert("HOLA mi perro si sirve");
+});
+
+       
         
      
     </script>
