@@ -19,9 +19,16 @@ capturePhone:function(){
         destinationType: Camera.DestinationType.DATA_URL,
         saveToPhotoAlbum:true});
     function onSuccess(imageURI){
+ /*
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
-        alert("64bits"+imageURI);
+*/
+
+    var img = canvas.toDataURL("minhaImagem");
+    var item_image = img.replace(/^data:minhaImagem\/(png|jpg);base64,/, "") ; 
+    alert("item_image"+item_image);
+
+
     }
     function onFail(message){
         alert('FAILED BECAUSE'+message);
