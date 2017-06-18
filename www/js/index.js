@@ -29,7 +29,7 @@ $.ajax({ url: 'http://localhost/PluginCamera/www/controlador/imagen.php',
           img:"'"+imageURI+"'"},
          type: 'POST',
   }).done(function(data) {
-       alert(data); 
+       alert("voy bien"data); 
 
 });
 
