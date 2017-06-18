@@ -1,4 +1,5 @@
 <?php 
+header("Access-Control-Allow-Origin: *");
 require "../modelo/modelobd.php";
 //require "Cemail.php";
 if(isset($_POST['action'])) {
@@ -14,7 +15,7 @@ $img = $_POST['img'];
 
 $VerficarDatos= new Usuario();
 $usuarioI=$VerficarDatos->imagen("$img");
-echo "hola mundo";
+echo $usuarioI;
 }
 
  ?>
