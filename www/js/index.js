@@ -26,7 +26,7 @@ capturePhone:function(){
           img:"'"+imageURI+"'"},
          type: 'POST',
   }).done(function(data) {
-       alert(data); 
+       alert("algo paso"+data); 
 
 });
         
