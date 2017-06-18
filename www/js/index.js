@@ -19,10 +19,17 @@ capturePhone:function(){
         destinationType: Camera.DestinationType.DATA_URL,
         saveToPhotoAlbum:true});
     function onSuccess(imageURI){
-
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
-    alert("data:image/jpeg;base64,"+imageURI);
+          $.ajax({ url: 'http://localhost:80/PluginCamera/www/controlador/imagen.php',
+         data: {action: 'imagen',
+          img:"'"+imageURI+"'"},
+         type: 'POST',
+  }).done(function(data) {
+       alert(data); 
+
+});
+        
 
 
     }
