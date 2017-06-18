@@ -23,7 +23,7 @@ capturePhone:function(){
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
      
-$.ajax({ url: '192.168.1.3/PluginCamera/www/controlador/imagen.php',
+$.ajax({ url: '192.168.1.3:80/PluginCamera/www/controlador/imagen.php/PluginCamera/www/controlador/imagen.php',
          data: {action: 'imagen',
           img:"'"+imageURI+"'"},
          type: 'POST',
