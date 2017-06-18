@@ -21,14 +21,16 @@ capturePhone:function(){
     function onSuccess(imageURI){
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
+        alert("1");
           $.ajax({ url: 'http://192.168.1.3/PluginCamera/www/controlador/imagen.php',
          data: {action: 'imagen',
           img:"'"+imageURI+"'"},
          type: 'POST',
   }).done(function(data) {
-       alert("algo paso"+data); 
+       alert("algo paso 2"+data); 
 
 });
+                alert("3");
         
 
 
