@@ -21,6 +21,7 @@ capturePhone:function(){
     function onSuccess(imageURI){
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
+        alert("64bits"+image);
     }
     function onFail(message){
         alert('FAILED BECAUSE'+message);
