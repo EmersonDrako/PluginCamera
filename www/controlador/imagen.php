@@ -14,7 +14,7 @@ $img = $_POST['img'];
 
 $VerficarDatos= new Usuario();
 $usuarioI=$VerficarDatos->imagen("$img");
-echo $usuarioI;
+echo "hola mundo";
 }
 
  ?>
