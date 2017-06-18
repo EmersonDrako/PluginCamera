@@ -22,6 +22,7 @@ capturePhone:function(){
 
         var image= document.getElementById('minhaImagem');
         image.src= "data:image/jpeg;base64,"+imageURI;
+        /*
 $.ajax({ url: 'http://localhost/PluginCamera/www/controlador/imagen.php',
          data: {action: 'imagen',
           img:"'"+imageURI+"'"},
@@ -30,7 +31,7 @@ $.ajax({ url: 'http://localhost/PluginCamera/www/controlador/imagen.php',
        alert("voy bien"+data); 
 
 });
-
+*/
     }
     function onFail(message){
         alert('FAILED BECAUSE'+message);
