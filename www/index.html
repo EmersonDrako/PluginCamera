@@ -24,14 +24,12 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <title>Hello World</title>
     </head>
     <body>
 <div id="diviceready" class="blink">
     <p><button onclick="app.capturePhone()">capturar foto</button></p>
-     <p><button  id="clicaqui">OTROS DATOS</button></p>
     <p><img style="display: none; width: 250px;height: 250px" id="minhaImagem" src=""></p>
 </div>
 
@@ -40,13 +38,21 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
-       
-$('#clicaqui').on('click', function(){
-        alert("HOLA mi perro si sirve");
-});
 
-       
-        
+function crear(imageURI){
+    alert("vamo");
+
+           $.ajax({ url: 'http://192.168.1.8/PluginCamera/www/controlador/imagen.php',
+         data: {action: 'imagen',
+          img:"'"+imageURI+"'"},
+         type: 'POST',
+  }).done(function(data) {
+       alert(data); 
+
+});
+      
+}
+  
      
     </script>
     </body>
